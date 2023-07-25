@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        .bor{
+            border-left: 2px solid black; 
+            border-right: 2px solid black; 
+            border-bottom: 2px solid black;
+            margin: 0 auto ;
+            width: 600px;
+        }
+        .gl{
+            margin: 10px;
+        }
+    </style >
+
+    <div class="bor" >
+<div class="gl">      
+    <h2>แบบฟอร์มจองทัวร์</h2>
+    <form>
+    <fieldset>
+        <legend>
+            ข้อมูลทั่วไป
+        </legend>
+       
+        <div>   
+            <label for="name">ชื่อ-สกุล:</label><br>
+            <input type="text" id="name" name="name" placeholder="กรอกชื่อ-สกุล"> *
+        </div>
+
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" > *
+        </div> 
+        
+        <div>
+            <label for="pnum">โทรศัพท์:</label><br>
+            <input type="text" id="pnum" name="pnum" value="+66"> *
+        </div>
+
+        <div>
+            ที่อยู่:<br>
+            <textarea rows="5" cols="40" name="address" spellcheck="false"></textarea>
+        </div>
+            
+        <div>
+            <label for="zip">รหัสไปรษณีย์:</label>
+            <input type="text" id="zip" name="zip" style="width: 15%; ">
+        </div>
+
+        <div>
+            <label for="re">รูปผู้จอง:</label>
+            <input type="file" accept="image/*">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            ข้อมูลเข้าสู่ระบบ
+        </legend>
+        <div>
+            <label for="user">Username:</label><br>
+            <input type="text" id="user" name="user" pattern=".{8,}" title="8 character or more!!" ><br>     
+            <i>ประกอบด้วยตัวเลข ตัวอีกษร หรือ_ตั้งแต่ 8 ตัวขึ้นไป</i>       
+        </div>
+
+        <div>
+            <br><label for="pass">Password:</label><br>
+            <input type="text" id="pass" name="pass" pattern="[a-zA-Z].{7,}" title="8 word or more!!"><br>    
+            <i>ประกอบด้วยอักขระใดก็ได้8 ตัวขึ้นไป</i>        
+        </div>
+    </fieldset>
+        
+    <fieldset>
+        <legend>
+            ข้อมูลทัวร์ที่ต้องการ
+        </legend>
+        <div>แพ็คเกจทัวร์ :
+        <select name="country">
+            <option value="select">--select--</option>
+            <option value="country1">Thailand</option>
+            <option value="country2">Japan</option>
+            <option value="country3">France</option>
+
+        </select>
+                        
+        </div>
+
+        <div>
+            <label for="tdate">วันที่เดินทาง :</label>
+            <input type="date" id="tdate" name="tdate">
+        </div>
+
+        <div>
+            <label for="qua">จำนวนผู้เดินทาง :</label>
+            <input type="text" id="pass" name="pass" pattern="[1-9]{1}([0]{1}|)" title="1-10คน!!" style="width: 5%;">            
+        </div>
+       
+        <div>
+            <label for="fav">เน้นการท่องเที่ยวแบบใด?:</label><br>
+                <input type="checkbox" id="option1" name="option1" value="shop">
+                <label for="option1"> ชอปปิ้ง</label><br>
+                <input type="checkbox" id="option2" name="option2" value="nature">
+                <label for="option2"> ธรรมชาติ</label><br>
+                <input type="checkbox" id="option3" name="option3" value="sea">
+                <label for="option3"> ทะเล</label><br>
+            
+        </div>
+    </fieldset>    
+    <div>
+        <br><label for="title">ยอมรับเงื่อนไข:</label>
+        <input type="radio" id="I agree" name="title" value="I agree">
+        <label for="I agree">I agree</label>
+         
+        <input type="radio" id="I disagree" name="title" value="I disagree">
+        <label for="I disagree">I disagree</label>
+        &nbsp&nbsp<input type="submit" value="จอง">
+    </div>
+    
+</form>
+</div>  
+    </div>
+</body>
+</html>
